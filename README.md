@@ -1,6 +1,10 @@
 # bookstore
 Test application for bookstore
 
+You need to install composer to install the dependencies before running the application, more on how to install composer can be found here: https://getcomposer.org/download/
+
+After installing the composer go to application root and issue the command <composer install> and it will start fetching the dependencies and in the process it will prompt for the database name, username and password. Providing those details will ensure connection to  MySql is established.
+
 Technologies and frameworks used:
 
 Symfony framework 2.8.*
