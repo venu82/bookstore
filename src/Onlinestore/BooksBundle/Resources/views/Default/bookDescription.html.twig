@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+{% block title %}Online Book Store{% endblock %}
+{% block body %}
+<div style="background-color:aliceblue;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="text-center">Book Description</h1>
+            </br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>
+                        {{ title }}
+                    </td>
+                    <td>
+                        {{ description }}
+                    </td>
+                </tr>
+            </table>
+            <blockquote>
+                <h5>Would you like to purchase this book? Enter your email address below and click purchase</h5>
+            </blockquote>
+            </br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form class="form-group" action="{{ path('purchase_book') }}" method="post">
+                {{ form_widget(form) }}
+                </br>
+                <input class="btn btn-default" type="submit" value="Buy Document/book"/>
+            </form>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <a class="btn btn-default pull-left" href = "{{ path('event_homepage') }}">No Thanks</a>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

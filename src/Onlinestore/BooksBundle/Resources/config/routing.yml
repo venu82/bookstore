@@ -1,0 +1,12 @@
+event_homepage:
+    path:     /Home
+    defaults: { _controller: BooksBundle:Default:index }
+book_descriptionpage:
+    path:     /Book/{id}
+    defaults: { _controller: BooksBundle:Default:bookDescription }
+purchase_book:
+    path:     /buy-a-book
+    defaults: { _controller: BooksBundle:Default:Orders }
+clear_recent:
+    path:     /clear-recent
+    defaults: { _controller: BooksBundle:Default:clearRecentViews }
